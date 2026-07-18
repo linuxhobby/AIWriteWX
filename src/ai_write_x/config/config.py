@@ -224,6 +224,18 @@ class Config:
                     "api_base": "https://api.minimaxi.com/v1",
                     "max_tokens": 32768,
                 },
+                "XiaomiMiMo": {
+                    "key": "OPENAI_API_KEY",
+                    "key_index": 0,
+                    "api_key": [],
+                    "model_index": 0,
+                    "model": [
+                        "openai/mimo-v2.5-pro",
+                        "openai/mimo-v2.5",
+                    ],
+                    "api_base": "https://api.xiaomimimo.com/v1",
+                    "max_tokens": 32768,
+                },
             },
             "img_api": {
                 "api_type": "picsum",
@@ -1723,6 +1735,8 @@ class Config:
             for api_type in api_keys_list:
                 if api_type == "SiliconFlow":
                     display_list.append("硅基流动")
+                elif api_type == "XiaomiMiMo":
+                    display_list.append("小米 MiMo")
                 else:
                     display_list.append(api_type)
 
